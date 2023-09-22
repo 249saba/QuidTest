@@ -1,0 +1,349 @@
+// @import "./assets/fonts/nexaRegular/stylesheet.css";
+// @import "./assets/fonts/proximaNova/stylesheet.css";
+// @import "./assets/fonts/proxima/stylesheet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./theme/mixing.scss";
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  // min-height: '100vh';
+  font-size: 62.5;
+  font-family: "Poppins" !important;
+  background-color: #fbfbfb;
+  // @include scrollbars(1.2rem, #707070);
+  // background: linear-gradient(to right, #c6e3fc, #ffece7);
+}
+
+span {
+  // font-family: 'Proxima sNova Alt Th';
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins";
+  margin: 0;
+  @apply text-black-900;
+  // line-height: 1.3;;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 3vw, 4rem);
+
+  @include for-phone-only {
+    font-size: clamp(1rem, 2vw, 2rem);
+  }
+}
+
+h2 {
+  font-size: clamp(2rem, 2.4rem, 3rem);
+
+  @include for-phone-only {
+  }
+}
+
+h3 {
+  font-size: clamp(2rem, 2.2vw, 2.8rem);
+
+  @include for-phone-only {
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
+  }
+}
+
+h4 {
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
+
+  @include for-phone-only {
+    font-size: clamp(1.2rem, 1.4vw, 2rem);
+  }
+}
+
+h5 {
+  font-size: clamp(1rem, 1.3rem, 1.4rem);
+
+  @include for-phone-only {
+    font-size: clamp(1rem, 1rem, 1.2rem);
+  }
+}
+
+h6 {
+  font-size: clamp(1rem, 1.1rem, 1.4rem);
+
+  @include for-phone-only {
+    font-size: clamp(0.63rem, calc(0.7rem + 1vw), 1.2rem);
+  }
+}
+
+p {
+  font-size: clamp(0.63rem, calc(0.4rem + 1vw), 1rem);
+  margin-bottom: 0;
+  font-family: "Poppins" !important;
+
+  @include for-phone-only {
+    font-size: clamp(0.63rem, calc(0.53rem + 1vw), 1.2rem);
+  }
+}
+
+.dashed-border-v {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C4C4C4FF' stroke-width='4' stroke-dasharray='1%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  width: 100%;
+  height: 1px;
+  // display: inline-block;
+}
+
+.hov-border {
+  @apply inline-block no-underline cursor-pointer;
+  @include for-desktop-up {
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      margin: auto;
+      position: relative;
+      top: 5px;
+      background: #051917;
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 40%;
+      position: relative;
+      top: 5px;
+      margin: auto;
+    }
+  }
+}
+
+.half-border {
+  @apply inline-block no-underline cursor-pointer;
+  @include for-desktop-up {
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      margin: auto;
+      position: relative;
+      top: 5px;
+      background: #051917;
+      transition: width 0.3s;
+    }
+    &::after {
+      width: 40%;
+      position: relative;
+      top: 5px;
+      margin: auto;
+    }
+  }
+}
+
+.login-gradient {
+  background: transparent
+    linear-gradient(
+      258deg,
+      #d1d4f2 0%,
+      #fedbe4 25%,
+      #ffdbe4 32%,
+      #fbe8b1 57%,
+      #e9f0b1 78%,
+      #c6ffb4 100%
+    )
+    0% 0% no-repeat padding-box;
+}
+
+.btn-white {
+  @apply border-[2px] bg-white border-black-900 text-black-900 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-white-stepper {
+  @apply border-none bg-white  text-gray-900 rounded-full w-auto h-12 normal-case;
+}
+
+.btn-black {
+  @apply border-[2px] border-black-900 text-white bg-black-900 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-gray {
+  @apply border-[2px] border-gray-900 text-white bg-gray-900 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-gray-light {
+  @apply border-[2px] border-gray-800 text-black-900 bg-gray-800 rounded-md min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-red {
+  @apply border-[2px] border-red-100 text-white bg-red-100 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-yellow {
+  @apply border-[2px] bg-yellow-200 border-yellow-200 text-white rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-blue {
+  @apply border-[2px] bg-blue-900 border-blue-900 text-white rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.btn-pink {
+  @apply border-[2px] bg-pink-100 border-pink-100 text-white rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+}
+
+.select-border-none {
+  label {
+    display: none !important;
+  }
+}
+
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   color: rgba(0, 0, 0, 0);
+//   opacity: 1;
+//   display: block;
+//   background: url("assets/icons/datepicker.svg") no-repeat;
+//   width: 20px;
+//   height: 20px;
+//   border-width: thin;
+// }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c6c4c4;
+  border-radius: 4px;
+}
+
+.PhoneInputInput {
+  @apply focus:ring-0;
+  @apply outline-none;
+}
+
+.rc-table .rc-table-header {
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+}
+.rc-table thead.rc-table-thead th {
+  background-color: #fff !important;
+}
+.rc-table-body {
+  border: none !important;
+}
+.css-jsexje-MuiSwitch-thum{
+  background-color: white !important;
+  box-shadow:black !important;
+}
+// .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+//   color:#051917 !important
+// }
+.custom-checkbox {
+  width: 20px; 
+  height: 20px;
+}
+.rc-table thead.rc-table-thead .header-title th {
+  color: #051917;
+  white-space: normal;
+  font-size: 14px;
+  border: 0.5px solid #dddddd;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.faqsdiv{
+  .css-1elwnq4-MuiPaper-root-MuiAccordion-root{
+    background-color: rgb(252, 249, 249) !important;
+    // background-color: rgb(39, 23, 23) !important;
+  }
+}
+
+.css-1or64il-MuiButtonGroup-root{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.rc-table tr.rc-table-row {
+  background-color: white !important;
+}
+.custom-input{
+  border: 1px solid rgb(105, 103, 103) !important;
+  border-radius: 5px;
+}
+.quill {
+  width: 100% !important;
+}
+.rc-table tbody > tr td {
+  background-color: unset !important;
+  color: #747474;
+  border: 1px solid #dddddd;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.QontoStepIcon-completedIcon{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.css-zpcwqm-MuiStepConnector-root{
+  top: 25% !important;
+  border-bottom: 1px solid #54CF2E !important;
+  right: calc(50% + 25px) !important;
+}
+.css-10mg1vw-MuiStepper-root{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.rc-table tr:nth-child(even) {
+  background-color: #f6f6f6 !important;
+}
+.css-d7gmiq-MuiDivider-root::before, .css-d7gmiq-MuiDivider-root::after {
+  border-left:thin rgb(153, 149, 149) dashed !important;
+}
+#panel1a-header2{
+  .css-o4b71y-MuiAccordionSummary-content.Mui-expanded{
+    color: #7580F2 !important;
+  }
+}
+.multiselectContainer {
+  font-size: 14px;
+  .checkbox {
+    accent-color: #7580f2 !important;
+  }
+  .groupHeading {
+    color: #051917;
+  }
+  .option {
+    color: gray;
+    padding-left: 25px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-bottom: 5px;
+  }
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+  background-color: transparent !important;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  margin: auto !important;
+}

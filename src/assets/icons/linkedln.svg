@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53.06" height="53" viewBox="0 0 53.06 53">
+  <g id="Group_79" data-name="Group 79" transform="translate(-1407.44 -41)">
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="21" cy="21" r="21" transform="translate(1412 47)" fill="#181313"/>
+    <g id="Group_426" data-name="Group 426" transform="translate(1407.44 41)">
+      <g id="Rectangle_213" data-name="Rectangle 213" transform="translate(0.06)" fill="#f4a739" stroke="#707070" stroke-width="1" opacity="0">
+        <rect width="53" height="53" stroke="none"/>
+        <rect x="0.5" y="0.5" width="52" height="52" fill="none"/>
+      </g>
+      <path id="linkedin" d="M26.218,0A26.218,26.218,0,1,0,52.436,26.218,26.218,26.218,0,0,0,26.218,0ZM18.6,39.635H12.214V20.424H18.6ZM15.4,17.8h-.041a3.328,3.328,0,1,1,.084-6.635A3.33,3.33,0,1,1,15.4,17.8ZM41.623,39.635H35.239V29.357c0-2.583-.924-4.344-3.235-4.344a3.5,3.5,0,0,0-3.276,2.335,4.372,4.372,0,0,0-.21,1.558V39.635H22.133s.084-17.408,0-19.211h6.385v2.725a6.339,6.339,0,0,1,5.754-3.171c4.2,0,7.346,2.745,7.346,8.65Zm0,0" fill="#f4a739"/>
+    </g>
+  </g>
+</svg>

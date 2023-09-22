@@ -1,0 +1,48 @@
+.dialog {
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+.container {
+  font-weight: 100 !important;
+  padding-bottom: 15px;
+  background-color: white;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    .closeIcon {
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+  .inputField {
+    margin-left: 20px;
+    margin-right: 20px;
+    .inputFieldColor {
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      backdrop-filter: blur(1px) !important;
+      border: 1px solid rgb(255, 255, 255) !important;
+    }
+  }
+
+  .createPlaylist {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(1px) !important;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .buttonStyle {
+    position: relative;
+    right: 20px;
+  }
+  .content {
+    padding: 1.5rem;
+    padding-top: 0;
+  }
+}

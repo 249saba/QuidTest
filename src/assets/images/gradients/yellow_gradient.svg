@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="334" height="465" viewBox="0 0 334 465">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="_1664273624688-image" data-name="1664273624688-image" width="334" height="465" rx="20" transform="translate(-21329 -14822.02)" fill="#ecc74f"/>
+    </clipPath>
+  </defs>
+  <g id="Group_83987" data-name="Group 83987" transform="translate(-75 -2088)">
+    <rect id="Rectangle_24067" data-name="Rectangle 24067" width="334" height="465" rx="20" transform="translate(75 2088)" fill="#ecc74f" opacity="0.3"/>
+    <g id="Mask_Group_251" data-name="Mask Group 251" transform="translate(21404 16910.02)" opacity="0.6" clip-path="url(#clip-path)">
+      <g id="Group_83281" data-name="Group 83281" transform="translate(-21411.605 -14847.939)">
+        <path id="Rectangle_24073" data-name="Rectangle 24073" d="M10,0H768.128a0,0,0,0,1,0,0V480.886a0,0,0,0,1,0,0H10a10,10,0,0,1-10-10V10A10,10,0,0,1,10,0Z" transform="translate(0 17.049)" fill="#ecc74f" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0.19"/>
+        <path id="Path_140210" data-name="Path 140210" d="M285.289,0h334.3V516.841H119.7Z" transform="translate(72.376 0)" fill="#fff" opacity="0.44"/>
+        <path id="Path_140211" data-name="Path 140211" d="M285.289,0h334.3V516.841H119.7Z" transform="translate(189.779 0)" fill="#fff" opacity="0.44"/>
+      </g>
+    </g>
+  </g>
+</svg>
