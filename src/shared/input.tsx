@@ -77,7 +77,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
         {label && (
           <label htmlFor={name} className={cn(_labelClassName, labelClassName)}>
             {label}
-            <span className="!text-red-100">*</span>
+            {/* <span className="!text-red-100">*</span> */}
           </label>
         )}
         <div className={cn(`relative flex items-center`, containerClass)}>

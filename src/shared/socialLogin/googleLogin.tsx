@@ -21,14 +21,11 @@ function GoogleAuth({ handleAuthData, className,handleButtonClick,icon,label,sty
       email: res?.email,
       social_media_token: res.sub,
       social_media_platform: "google",
-      // plan_id:localStorage.getItem("plan_id"),
-      // // plan_id:1,
-      // module_id:localStorage.getItem("moduleId"),
-      // apiType:"register"
+  
     };
     handleAuthData?.(_authData1);
   };
-console.log("plan_id",localStorage.getItem("plan_id"))
+
   return (
     <div className={`w-full cursor-pointer ${className}`}>
       <LoginSocialGoogle
@@ -50,10 +47,10 @@ console.log("plan_id",localStorage.getItem("plan_id"))
         <CustomButton
         icon={<Googleblue />}
         handleButtonClick={handleButtonClick}
-        labelClass="w-full sm:hidden text-sm font-medium"
-        label="Google"
+        labelClass=" text-sm font-medium"
+        label="Sign in with Google"
         type={"button"}
-        styleClass="btn-white justify-start text-center  !rounded-lg w-full !border-gray-300 !border-[1px] !shadow-none"
+        styleClass="btn-white justify-center items-center !rounded-lg w-full !border-gray-300 !border-[1px] !shadow-none gap-2"
       />
         )}
 

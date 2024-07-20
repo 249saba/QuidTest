@@ -12,7 +12,7 @@ import {
   Card,
   IconButton,
 } from "@material-tailwind/react";
-import { ReactComponent as Logo } from "@assets/Logo.svg";
+import Logo from "@assets/icons/Placeholder_Logo.png";
 import { ReactComponent as CartIcon } from "@assets/icons/frank-shopping-bag.svg";
 import {
   CubeTransparentIcon,
@@ -29,7 +29,7 @@ import {
 } from "@heroicons/react/24/outline";
 import CustomButton from "./customButton";
 import { useNavigate } from "react-router-dom";
-import { IsAuthenticated } from "./utils/authService";
+
 
 export interface IFooterProps {
   isShow?: boolean;
@@ -229,7 +229,7 @@ export default function NavBar({ isShow }: IFooterProps) {
       <div className="relative mx-auto flex items-center text-black-900">
         {/* <IconButton size="sm" variant="text"> */}
         <div className="inline-flex">
-          <Logo
+          <img src={Logo}
             onClick={() => navigate("/")}
             className="w-9/12 cursor-pointer"
           />

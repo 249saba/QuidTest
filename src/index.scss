@@ -172,7 +172,7 @@ p {
 }
 
 .btn-black {
-  @apply border-[2px] border-black-900 text-white bg-black-900 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
+  @apply  text-black-100 bg-black-900 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;
 }
 
 .btn-gray {
