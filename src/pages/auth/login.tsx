@@ -13,8 +13,9 @@ import Eye from "@assets/icons/tinted_Icon.png";
 
 import { handleToastMessage } from "@src/shared/toastify";
 
-import Header from "@src/shared/navbar";
+import Navbar from "@src/shared/navbar";
 import { useState } from "react";
+import SignupOptions from "../SignupOptions";
 
 export interface initialSchemaValues {
   email: string;
@@ -38,113 +39,124 @@ const Login = () => {
 
   const handleSubmit = async (values: any) => {
     if (values) {
-      try{
+      try {
         const res = await login(values.email, values.password);
         if (res) {
           navigate("/signup");
-        } 
+        }
+      } catch {
+        setError("Login failed. Please check your credentials.");
       }
-      catch{ setError('Login failed. Please check your credentials.');}
-
     }
   };
-console.log("error",error)
+  console.log("error", error);
   return (
-    <div>
-      <Header isShow={true} />
+    <>
+     <div className="bg-[url('@assets/icons/home.jpg')] bg-cover bg-center bg-no-repeat h-[800px] w-full ">
+      <Navbar isShow={true} />
       <ContentContainer>
-        <div className="flex md:flex-col justify-between m-auto items-center gap-20">
-          <CustomCard styleClass=" w-10/12 px-10 py-6 text-left ">
-            <h1 className="font-semibold">Welcome</h1>
-            <h1 className="font-semibold">back</h1>
-            <h6 className="py-3 font-light">
-              You need to be signed in to access the project dashboard.
-            </h6>
-            <Formik
-              initialValues={initialValues}
-              validationSchema={FormSchema}
-              onSubmit={handleSubmit}
-            >
-              {({ errors, handleChange, handleBlur, touched, values }) => (
-                <Form className="space-y-6 mt-4 ">
-                  <div className="space-y-3">
-                    <Input
-                      id="email"
-                      name="email"
-                      label="Email or username"
-                      type="text"
-                      variant="outline"
-                      placeholder="Enter Email ID"
-                      handldChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.email}
-                      error={errors.email}
-                      touched={touched.email}
-                    />
-
-                    <Input
-                      name="password"
-                      label="Password"
-                      type="password"
-                      placeholder="Enter Password"
-                      variant="outline"
-                      handldChange={handleChange}
-                      rightIcon={<img src={Eye} />}
-                      onBlur={handleBlur}
-                      error={errors.password}
-                      touched={touched.password}
-                      value={values.password}
-                    />
-                    <div className="flex items-center justify-between">
-                      <div className="flex gap-2 items-center justify-center">
-                        <Checkbox name={"terms"} />
-                        <label className="text-black-100 font-normal">
-                          Keep me signed in
-                        </label>{" "}
-                      </div>
-
-                      <a
-                        // onClick={handleForgotPassword}
-                        href="javascript:void(0)"
-                        className="text-blue-600 font-medium flex text-sm pt-3 underline"
-                      >
-                        Forgot password?
-                      </a>
-                    </div>
-                    {error && <p className="text-red-700">{error}</p>}
-                    <div className="w-9/12 mx-auto">
-                      <CustomButton
-                        label="Sign in"
-                        labelClass="font-semibold"
-                        type={"submit"}
-                        styleClass="btn-black !bg-[#30d4a3]   !rounded-lg w-full mt-5"
-                      />
-                    </div>
-
-                    <div className="flex flex-col sm:flex-col  gap-4 sm:gap-2 sm:flex sm:items-center">
-                      <GoogleAuth
-                        className="btn-white justify-start text-center  !rounded-lg w-full !border-gray-300 !border-[1px] !shadow-none"
-                        // handleAuthData={handleAuthData}
-                      />
-
-                      <p className="text-gray-900 text-xs text-center mt-3">
-                        Haven't joined yet?{" "}
-                        <a
-                          // onClick={handleSignUp}
-                          className="text-blue-600 cursor-pointer"
-                        >
-                          Sign up
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </Form>
-              )}
-            </Formik>
+        <div className="flex flex-col md:flex-col justify-between mx-8  gap-5 items-start w-full">
+          <CustomCard styleClass="flex flex-row px-4 py-3 items-center gap-2 ">
+            <h5 className="font-semibold">
+              An Open Honest Neighborhood Platform
+            </h5>
+            <span className="text-blue-600 font-bold">Coming 2024</span>
+          </CustomCard>
+          <CustomCard styleClass="flex flex-col px-4 py-3 items-start gap-2 ">
+            <h5 className="font-semibold">Powered by</h5>
+            <span className="text-pink-400 font-bold">
+              Neighborhood Stars That Truly Care
+            </span>
+            <table className="min-w-full table-auto border-collapse  ">
+              <thead>
+                <tr>
+                  <th className="  py-2 text-left text-blue-600">
+                    Neighborhood News
+                  </th>
+                  <th className=" py-2 text-left text-blue-600">
+                    Small Business Directory 2
+                  </th>
+                  <th className=" py-2 text-left text-blue-600">Ask a Pro 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="text-pink-400  text-left py-2">
+                    School happenings
+                  </td>
+                  <td className="text-pink-400  text-left py-2">
+                    400 + Categories
+                  </td>
+                  <td className="text-pink-400 text-left  py-2">
+                    Business Leads Bids
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-pink-400 text-left  py-2">Advice</td>
+                  <td className="text-pink-400 text-left  py-2">
+                    Free Listing
+                  </td>
+                  <td className="text-pink-400 text-left  py-2">
+                    400 + Categories{" "}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-pink-400 text-left py-2">Events</td>
+                  <td className="text-pink-400 text-left py-2">Most Liked</td>
+                  <td className="text-pink-400 text-left py-2">
+                    Neighborhood Comments
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </CustomCard>
+          <div className="flex flex-row gap-3 items-center justify-center mx-auto">
+            <CustomButton
+              label={"Star Sign in"}
+              type={"submit"}
+              isLoading={false}
+              handleButtonClick={() => navigate("/login")}
+              variant={"outlined"}
+              styleClass={"bg-pink-600 !text-white rounded-3xl"}
+            />
+            <CustomButton
+              label={"Star Sign up"}
+              type={"submit"}
+              isLoading={false}
+              handleButtonClick={() => navigate("/login")}
+              variant={"outlined"}
+              styleClass={"bg-pink-600 !text-white rounded-3xl"}
+            />
+            <CustomButton
+              label={"Star Program"}
+              type={"submit"}
+              isLoading={false}
+              handleButtonClick={() => navigate("/login")}
+              variant={"outlined"}
+              styleClass={"bg-pink-600 !text-white rounded-3xl"}
+            />
+          </div>
+          <CustomCard styleClass="flex flex-col py-3 items-center  m-auto justify-center w-1/2">
+            <h5 className="font-semibold text-pink-400">Be A Star</h5>
+            <div className=" flex gap-2 items-center justify-center ">
+              <label className="text-black-100 font-bold text-lg">.</label>
+              <label className="text-black-100 font-semibold">
+                Real Estate Agents
+              </label>
+              <label className="text-black-100 font-bold text-lg">.</label>
+              <label className="text-black-100 font-semibold">Insurance</label>
+              <label className="text-black-100 text-lg font-bold">.</label>
+              <label className="text-black-100 font-semibold">Finance</label>
+              <label className="text-black-100 text-lg font-extrabold">.</label>
+              <label className="text-black-100 font-semibold">Beauty</label>
+            </div>
           </CustomCard>
         </div>
       </ContentContainer>
     </div>
+    <SignupOptions/>
+    </>
+   
   );
 };
 

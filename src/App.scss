@@ -29,33 +29,9 @@
     }
   }
 
-  .nav_bg {
-    // background-position: center;
-    // transition: opacity 1s ease-in-out;
-    // -webkit-transition: opacity 1s ease-in-out;
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
-    box-shadow: 0px 3px 20px #00000029;
-    // background: linear-gradient(to right, #c6e3fc, #ffece7);
-    // -moz-transition: opacity 1s ease-in-out;
-    // -o-transition: opacity 1s ease-in-out;
-    // z-index: 1;
-    // height: 100%;
-    color: #000;
-  }
+ 
 
-  .bg-gradient {
-    background: url("assets/images/bg-gradient.svg") no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
 
-  .login-bg-gradient {
-    background: url("assets/images/login_gradient.svg") no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
 
   .grid-container {
     display: grid;
@@ -78,20 +54,7 @@
   text-align: center;
 }
 
-// .swiper-button-next {
-//   background-image: url(./assets/icons/arrow_left.svg);
-//   background-repeat: no-repeat;
-//   background-size: 100% auto;
-//   background-position: center;
-// }
 
-// .swiper-button-prev {
-//   background-image: url(./assets/icons/arrow_right.svg);
-//   background-repeat: no-repeat;
-//   // background-size: 100% auto;
-//   // background-position: center;
-//   background-size: contain;
-// }
 
 .swiper-button-next::after {
   // display: none;

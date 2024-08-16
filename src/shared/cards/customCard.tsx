@@ -9,7 +9,7 @@ interface styleClass {
 
 const CustomCard = ({ onClick, children, styleClass }: styleClass) => {
   return (
-    <Card onClick={onClick} className={`${styleClass} bg-white shadow-5xl`}>
+    <Card onClick={onClick} className={`${styleClass} `}>
       {children}
     </Card>
   );

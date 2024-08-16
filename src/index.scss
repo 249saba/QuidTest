@@ -149,19 +149,19 @@ p {
   }
 }
 
-.login-gradient {
-  background: transparent
-    linear-gradient(
-      258deg,
-      #d1d4f2 0%,
-      #fedbe4 25%,
-      #ffdbe4 32%,
-      #fbe8b1 57%,
-      #e9f0b1 78%,
-      #c6ffb4 100%
-    )
-    0% 0% no-repeat padding-box;
-}
+// .login-gradient {
+//   background: transparent
+//     linear-gradient(
+//       258deg,
+//       #d1d4f2 0%,
+//       #fedbe4 25%,
+//       #ffdbe4 32%,
+//       #fbe8b1 57%,
+//       #e9f0b1 78%,
+//       #c6ffb4 100%
+//     )
+//     0% 0% no-repeat padding-box;
+// }
 
 .btn-white {
   @apply border-[2px] bg-white border-black-900 text-black-900 rounded-[41px] min-w-[9em] sm:min-w-[6em] md:min-w-[6em] h-12 normal-case;

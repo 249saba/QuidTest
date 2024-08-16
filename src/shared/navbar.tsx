@@ -13,7 +13,15 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import Logo from "@assets/icons/Placeholder_Logo.png";
-import { ReactComponent as CartIcon } from "@assets/icons/frank-shopping-bag.svg";
+import Neighborly_new from "@assets/icons/Neighborly_new.png";
+import Directory from "@assets/icons/Directory.png";
+import Ask_a_pro from "@assets/icons/Ask_a_pro.png";
+import jobs from "@assets/icons/jobs.png";
+import Biz_for_sale from "@assets/icons/Biz_for_sale.png";
+import Fund_me from "@assets/icons/Fund_me.png";
+import Deals from "@assets/icons/Deals.png";
+import location from "@assets/icons/location.png";
+import search from "@assets/icons/search.png";
 import {
   CubeTransparentIcon,
   UserCircleIcon,
@@ -29,7 +37,6 @@ import {
 } from "@heroicons/react/24/outline";
 import CustomButton from "./customButton";
 import { useNavigate } from "react-router-dom";
-
 
 export interface IFooterProps {
   isShow?: boolean;
@@ -148,23 +155,38 @@ function NavListMenu() {
 // nav list component
 const navListItems = [
   {
-    label: "Home",
-    icon: UserCircleIcon,
+    label: "Neighborly news",
+    icon: Neighborly_new,
     link: "/",
   },
   {
-    label: "My Orders",
-    icon: CubeTransparentIcon,
+    label: "Directory",
+    icon: Directory,
     link: "/myOrders",
   },
   {
-    label: "My Bookings",
-    icon: CodeBracketSquareIcon,
+    label: "Ask a pro",
+    icon: Ask_a_pro,
     link: "/",
   },
   {
-    label: "My Favorites",
-    icon: CodeBracketSquareIcon,
+    label: "jobs",
+    icon: jobs,
+    link: "/favourites",
+  },
+  {
+    label: "Biz for Sale",
+    icon: Biz_for_sale,
+    link: "/favourites",
+  },
+  {
+    label: "Fund Me",
+    icon: Fund_me,
+    link: "/favourites",
+  },
+  {
+    label: "Deals",
+    icon: Deals,
     link: "/favourites",
   },
 ];
@@ -179,7 +201,7 @@ function NavList({ handleNavToggle }: any) {
     <ul className="mb-4 mt-5 gap-4  flex flex-col    lg:flex-row lg:items-center ">
       {/* <NavListMenu /> */}
       <>
-        {navListItems.map(({ label, icon, link }, key) => (
+        {/* {navListItems.map(({ label, icon, link }, key) => (
           <h6
             key={key}
             onClick={() => handleNavigation(link)}
@@ -187,8 +209,9 @@ function NavList({ handleNavToggle }: any) {
           >
             {label}
           </h6>
-        ))}
-        <div className="inline-flex ml-auto space-x-2 items-center  lg:hidden">
+        ))} */}
+
+        <div className="inline-flex ml-auto space-x-2 items-center   lg:hidden">
           <CustomButton
             label={"Login"}
             type={"submit"}
@@ -225,54 +248,59 @@ export default function NavBar({ isShow }: IFooterProps) {
   }, []);
 
   return (
-    <Navbar className=" fixed !z-[100] !bg-white p-2 lg:px-12 md:px-6 sm:px-6 rounded-none max-w-none">
-      <div className="relative mx-auto flex items-center text-black-900">
-        {/* <IconButton size="sm" variant="text"> */}
+    <div className=" fixed !z-[100]  p-2 lg:px-6 md:px-6 sm:px-6 rounded-none w-full opacity-90 bg-white">
+      <div className="relative mx-auto flex items-center text-black-900 space-x-3">
         <div className="inline-flex">
-          <img src={Logo}
+          <img
+            src={Logo}
             onClick={() => navigate("/")}
             className="w-9/12 cursor-pointer"
           />
         </div>
-        {/* </IconButton> */}
-        {/* <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
-          <NavList />
-        </div> */}
-        {/* <div className="inline-flex ml-auto space-x-2 items-center ">
-          <IconButton className="mr-4" size="lg" variant="text">
-            <CartIcon className="h-8 w-8" />
-          </IconButton>
-          <CustomButton
-            label={"Login"}
-            type={"submit"}
-            isLoading={false}
-            handleButtonClick={() => navigate("/login")}
-            variant={"outlined"}
-            styleClass={"btn-white sm:hidden md:hidden "}
-          />
-          <CustomButton
-            label={"Sign Up"}
-            type={"submit"}
-            isLoading={false}
-            variant={"outlined"}
-            styleClass={"btn-black  sm:hidden md:hidden"}
-            handleButtonClick={() => navigate("/signup")}
-          />
-
+        <div className=" flex flex-row justify-between items-center border h-10 rounded-full border-black-100 px-4 w-2/4">
+          <label className=" flex  text-black-700 font-semibold">
+            Car Detail Biz
+          </label>
+          <div className="flex items-center justify-center">
+            <span>|</span>
+            <img src={location} className="h-5 w-5" />
+            <span>Houston, TX 7707</span>
+            <img src={search} className="h-5 w-5" />
+          </div>
         </div>
-        <IconButton
-          size="sm"
-          color="blue-gray"
-          variant="text"
-          onClick={toggleIsNavOpen}
-          className="ml-auto sm:ml-0 md:ml-0 lg:hidden"
-        >
-          <Bars2Icon className="h-6 w-6" />
-        </IconButton> */}
+        <CustomButton
+          label={"About"}
+          type={"submit"}
+          isLoading={false}
+          handleButtonClick={() => navigate("/login")}
+          variant={"outlined"}
+          styleClass={"btn-white"}
+        />
+        <CustomButton
+          label={"Advertise"}
+          type={"submit"}
+          isLoading={false}
+          handleButtonClick={() => navigate("/login")}
+          variant={"outlined"}
+          styleClass={"btn-white "}
+        />
+        {/* </IconButton> */}
+        <div className="absolute top-1/4 right-[1%] flex gap-3">
+        {navListItems.map((item)=>
+        <div className="flex flex-col items-center justify-center">
+          <img src={item.icon} className="h-5 w-5"/>
+          <label className="font-semibold">{item.label}</label>
+          
+        </div>)}
+     
+   
+       
+   
       </div>
       <MobileNav open={isNavOpen} className="">
         <NavList handleNavToggle={toggleIsNavOpen} />
       </MobileNav>
-    </Navbar>
+      </div>
+    </div>
   );
 }
